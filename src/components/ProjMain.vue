@@ -1,7 +1,12 @@
 <script>
+import ProjButton from './ProjButton.vue';
 
 export default {
   name: 'ProjMain',
+
+  components: {
+    ProjButton,
+  },
 
   data() {
     return {
@@ -30,6 +35,7 @@ export default {
       <div>
         <!-- component still to be created -->
       </div>
+      <ProjButton :textOnTheButton="`read more`" />
     </div>
 
   </figure>
@@ -47,8 +53,22 @@ figure {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
     text-align: center;
+
+    h3 {
+      color: $brandOrange;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: $brandWhite;
+      text-transform: uppercase;
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      transform: scaleY(1.25);
+    }
   }
 }
 </style>

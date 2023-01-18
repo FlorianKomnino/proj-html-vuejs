@@ -45,7 +45,7 @@ export default {
 #topBar {
   margin: 0 !important;
   padding: 0 !important;
-  background-color: $blackMetal;
+  background-color: $brandBlack;
   height: 82.5px;
   width: 100vw;
   display: flex;
@@ -55,7 +55,7 @@ export default {
     padding: 0 3rem;
 
     li {
-      color: white;
+      color: $brandWhite;
     }
   }
 }
