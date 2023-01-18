@@ -22,8 +22,8 @@ export default {
 }
 </script>
 
-<template class="row">
-  <div class="col-12" id="topBar">
+<template>
+  <div id="topBar">
     <figure>
       <img :src="getImagePath('../assets/logo.png')" alt="">
     </figure>
@@ -35,20 +35,28 @@ export default {
       </li>
     </ul>
   </div>
+
+  <ProjMain />
 </template>
 
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
 
 #topBar {
+  margin: 0 !important;
+  padding: 0 !important;
   background-color: $blackMetal;
   height: 82.5px;
   width: 100vw;
   display: flex;
   justify-content: space-between;
 
-  li {
-    color: white;
+  ul {
+    padding: 0 3rem;
+
+    li {
+      color: white;
+    }
   }
 }
 </style>

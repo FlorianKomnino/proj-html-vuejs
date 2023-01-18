@@ -9,8 +9,10 @@ export default {
 }
 </script>
 
-<template class="container">
-  <ProjHeader />
+<template>
+  <div class="projHeaderWrapper">
+    <ProjHeader />
+  </div>
 </template>
 
 <style lang="scss">
@@ -18,5 +20,10 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.projHeaderWrapper {
+  max-width: 100vw;
+  overflow: hidden;
 }
 </style>
