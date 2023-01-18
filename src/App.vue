@@ -23,7 +23,7 @@ export default {
 }
 
 .projHeaderWrapper {
-  max-width: 100vw;
-  overflow: hidden;
+  width: 100vw;
+  overflow-x: hidden;
 }
 </style>

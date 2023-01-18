@@ -1,10 +1,10 @@
 <script>
 
 export default {
-  name: 'ProjButton',
+  name: 'ProjCard',
 
   props: {
-    textOnTheButton: String,
+    titleText: String,
   },
 
   data() {
@@ -22,23 +22,24 @@ export default {
 </script>
 
 <template>
-  <button>
-    {{ textOnTheButton }}
-  </button>
+  <div class="cardWrapper">
+    <i class="fa-solid fa-compact-disc"></i>
+    <h4>
+      {{ titleText }}
+    </h4>
+    <p>
+      contrary popular belief, lorem ipsum not simply ipsum random text
+    </p>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
 
-button {
-  width: 150px;
-  height: 30px;
+.cardWrapper {
   color: $brandWhite;
-  background-color: transparent;
-  border: 1px solid $brandOrange;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 11px;
-  transform: scaleY(1.1);
+  height: 100%;
+  width: 100%;
+  background-color: green;
 }
 </style>

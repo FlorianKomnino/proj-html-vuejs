@@ -1,16 +1,22 @@
 <script>
 import ProjButton from './ProjButton.vue';
+import ProjCard from './ProjCard.vue';
 
 export default {
   name: 'ProjMain',
 
   components: {
     ProjButton,
+    ProjCard,
   },
 
   data() {
     return {
-
+      frontViewCardsTitles: {
+        contentTitleOriginalIdeas: 'original ideas',
+        contentTitleMusicStudio: 'music stuidio',
+        contentTitleAcousticCovers: 'acoustic covers',
+      },
     }
   },
 
@@ -37,7 +43,17 @@ export default {
       </div>
       <ProjButton :textOnTheButton="`read more`" />
     </div>
-
+    <div class="frontViewCards">
+      <article>
+        <ProjCard :titleText="frontViewCardsTitles.contentTitleOriginalIdeas" />
+      </article>
+      <article>
+        <ProjCard :titleText="frontViewCardsTitles.contentTitleMusicStudio" />
+      </article>
+      <article>
+        <ProjCard :titleText="frontViewCardsTitles.contentTitleAcousticCovers" />
+      </article>
+    </div>
   </figure>
 </template>
 
@@ -47,6 +63,7 @@ export default {
 figure {
   height: calc(100vh - 80px);
   position: relative;
+  margin-bottom: 0;
 
   div.jumboText {
     position: absolute;
@@ -70,5 +87,9 @@ figure {
       transform: scaleY(1.25);
     }
   }
+}
+
+.frontViewCards {
+  margin-top: 0;
 }
 </style>
