@@ -45,7 +45,7 @@ export default {
         <ProjButton :textOnTheButton="`read more`" class="text-uppercase customButton" />
       </div>
     </figure>
-    <div class="frontViewCards col-9 d-flex">
+    <div class="frontViewCards col-10 d-flex">
       <article>
         <!-- iconClass set momentarily to different icon because given speaker icon was not found -->
         <ProjCard :titleText="topCardsProps.titleOriginalIdeas" iconClass="fa-regular fa-lightbulb" />

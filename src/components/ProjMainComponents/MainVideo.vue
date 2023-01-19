@@ -48,6 +48,7 @@ section.senseSection {
 
   figure {
     position: relative;
+    margin-bottom: 0;
   }
 
   h3 {

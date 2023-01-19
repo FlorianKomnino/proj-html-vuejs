@@ -5,6 +5,8 @@ import ProjCard from './ProjCard.vue';
 import FirstSense from './ProjMainComponents/FirstSense.vue';
 import MainJumbo from './ProjMainComponents/MainJumbo.vue';
 import MainVideo from './ProjMainComponents/MainVideo.vue';
+import SecondSense from './ProjMainComponents/SecondSense.vue';
+import AlbumOut from './ProjMainComponents/AlbumOut.vue';
 
 export default {
   name: 'ProjMain',
@@ -15,6 +17,8 @@ export default {
     FirstSense,
     MainJumbo,
     MainVideo,
+    SecondSense,
+    AlbumOut,
   },
 
   data() {
@@ -42,6 +46,8 @@ export default {
     <MainJumbo />
     <FirstSense :senseContentText="store.senseSectionText" />
     <MainVideo />
+    <SecondSense />
+    <AlbumOut />
   </div>
 
 

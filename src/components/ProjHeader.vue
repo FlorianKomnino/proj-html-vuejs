@@ -56,6 +56,13 @@ export default {
   display: flex;
   justify-content: space-between;
 
+  figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.5rem;
+  }
+
   ul {
     padding: 0 3rem;
 
