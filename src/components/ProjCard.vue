@@ -5,6 +5,7 @@ export default {
 
   props: {
     titleText: String,
+    iconClass: String,
   },
 
   data() {
@@ -23,7 +24,7 @@ export default {
 
 <template>
   <div class="cardWrapper">
-    <i class="fa-solid fa-compact-disc"></i>
+    <i :class="iconClass"></i>
     <h4>
       {{ titleText }}
     </h4>
@@ -40,20 +41,25 @@ export default {
   color: $brandWhite;
   height: 100%;
   width: 100%;
-  background-color: green;
+  background-color: $alternativeBlack;
   padding: 3rem;
 
   i {
-    font-size: 4rem;
+    font-size: 5rem;
+    margin-top: 15px;
   }
 
   h4 {
+    margin-top: 35px;
     text-transform: uppercase;
+    transform: scaleY(1.25);
   }
 
   p {
+    margin-top: 10px;
     font-size: 0.75rem;
     line-height: 1.2rem;
+    font-weight: 300;
     text-transform: capitalize;
   }
 }

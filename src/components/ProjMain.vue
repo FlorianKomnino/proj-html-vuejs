@@ -46,13 +46,14 @@ export default {
   </figure>
   <div class="frontViewCards col-9 d-flex">
     <article>
-      <ProjCard :titleText="topCardsProps.titleOriginalIdeas" />
+      <!-- iconClass set momentarily to different icon because given speaker icon was not found -->
+      <ProjCard :titleText="topCardsProps.titleOriginalIdeas" iconClass="fa-regular fa-lightbulb" />
     </article>
     <article>
-      <ProjCard :titleText="topCardsProps.titleMusicStudio" />
+      <ProjCard :titleText="topCardsProps.titleMusicStudio" iconClass="fa-solid fa-record-vinyl" />
     </article>
     <article>
-      <ProjCard :titleText="topCardsProps.titleAcousticCovers" />
+      <ProjCard :titleText="topCardsProps.titleAcousticCovers" iconClass="fa-solid fa-headset" />
     </article>
   </div>
 </template>
