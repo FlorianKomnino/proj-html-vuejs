@@ -16,7 +16,7 @@ export default {
     return {
       topCardsProps: {
         titleOriginalIdeas: 'original ideas',
-        titleMusicStudio: 'music stuidio',
+        titleMusicStudio: 'music studio',
         titleAcousticCovers: 'acoustic covers',
       },
     }

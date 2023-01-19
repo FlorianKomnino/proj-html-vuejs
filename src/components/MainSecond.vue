@@ -13,9 +13,7 @@ export default {
   data() {
     return {
       topCardsProps: {
-        titleOriginalIdeas: 'original ideas',
-        titleMusicStudio: 'music studio',
-        titleAcousticCovers: 'acoustic covers',
+
       },
     }
   },
