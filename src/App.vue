@@ -10,7 +10,13 @@ export default {
 </script>
 
 <template>
-  <ProjHeader />
+  <div id="projHeaderWrapper" class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <ProjHeader />
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
@@ -18,5 +24,9 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#projHeaderWrapper {
+  overflow-x: hidden;
 }
 </style>

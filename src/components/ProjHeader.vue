@@ -23,20 +23,25 @@ export default {
 </script>
 
 <template>
-  <div id="topBar">
-    <figure>
-      <img :src="getImagePath('../assets/logo.png')" alt="">
-    </figure>
+  <div class="row">
+    <div class="col">
+      <div id="topBar">
+        <figure>
+          <img :src="getImagePath('../assets/logo.png')" alt="">
+        </figure>
 
-    <ul>
-      <li>
-        <!-- this will be a v-for -->
-        Example text
-      </li>
-    </ul>
+        <ul>
+          <li>
+            <!-- this will be a v-for -->
+            Example text
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </div>
-
   <ProjMain />
+
 </template>
 
 <style lang="scss" scoped>

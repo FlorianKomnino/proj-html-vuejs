@@ -32,13 +32,11 @@ export default {
 
 button {
   width: 150px;
-  height: 30px;
+  height: 40px;
   color: $brandWhite;
   background-color: transparent;
-  border: 1px solid $brandOrange;
-  text-transform: uppercase;
+  border: 0.25px solid $brandOrange;
   font-weight: 600;
-  font-size: 11px;
   transform: scaleY(1.1);
 }
 </style>
