@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="projHeaderWrapper">
+  <div id="projHeaderWrapper">
     <ProjHeader />
   </div>
 </template>
@@ -22,8 +22,8 @@ export default {
   box-sizing: border-box;
 }
 
-.projHeaderWrapper {
-  width: 100vw;
+#projHeaderWrapper {
+  max-width: 100vw !important;
   overflow-x: hidden;
 }
 </style>

@@ -12,10 +12,10 @@ export default {
 
   data() {
     return {
-      frontViewCardsTitles: {
-        contentTitleOriginalIdeas: 'original ideas',
-        contentTitleMusicStudio: 'music stuidio',
-        contentTitleAcousticCovers: 'acoustic covers',
+      topCardsProps: {
+        titleOriginalIdeas: 'original ideas',
+        titleMusicStudio: 'music stuidio',
+        titleAcousticCovers: 'acoustic covers',
       },
     }
   },
@@ -30,7 +30,7 @@ export default {
 
 <template>
   <figure>
-    <img src="../assets/jumbotronA.png" alt="">
+    <img :src="getImagePath('../assets/jumbotronA.png')" class="img-fluid" alt="">
     <div class="jumboText">
       <h3>
         instrumental rock
@@ -43,27 +43,29 @@ export default {
       </div>
       <ProjButton :textOnTheButton="`read more`" />
     </div>
-    <div class="frontViewCards">
-      <article>
-        <ProjCard :titleText="frontViewCardsTitles.contentTitleOriginalIdeas" />
-      </article>
-      <article>
-        <ProjCard :titleText="frontViewCardsTitles.contentTitleMusicStudio" />
-      </article>
-      <article>
-        <ProjCard :titleText="frontViewCardsTitles.contentTitleAcousticCovers" />
-      </article>
-    </div>
   </figure>
+  <div class="frontViewCards col-9 d-flex">
+    <article>
+      <ProjCard :titleText="topCardsProps.titleOriginalIdeas" />
+    </article>
+    <article>
+      <ProjCard :titleText="topCardsProps.titleMusicStudio" />
+    </article>
+    <article>
+      <ProjCard :titleText="topCardsProps.titleAcousticCovers" />
+    </article>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
+@use "../../node_modules/bootstrap" as *;
 
 figure {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   position: relative;
   margin-bottom: 0;
+  overflow: hidden;
 
   div.jumboText {
     position: absolute;
@@ -91,5 +93,15 @@ figure {
 
 .frontViewCards {
   margin-top: 0;
+  position: absolute;
+  top: 100vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  article {
+    height: 340px;
+    padding: 0.75rem;
+  }
 }
 </style>

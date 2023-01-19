@@ -41,5 +41,20 @@ export default {
   height: 100%;
   width: 100%;
   background-color: green;
+  padding: 3rem;
+
+  i {
+    font-size: 4rem;
+  }
+
+  h4 {
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    text-transform: capitalize;
+  }
 }
 </style>
