@@ -1,6 +1,7 @@
 <script>
 import ProjButton from './ProjButton.vue';
 import ProjCard from './ProjCard.vue';
+import MainSecond from './MainSecond.vue';
 
 export default {
   name: 'ProjMain',
@@ -8,6 +9,7 @@ export default {
   components: {
     ProjButton,
     ProjCard,
+    MainSecond,
   },
 
   data() {
@@ -56,6 +58,7 @@ export default {
       <ProjCard :titleText="topCardsProps.titleAcousticCovers" iconClass="fa-solid fa-headset" />
     </article>
   </div>
+  <MainSecond />
 </template>
 
 <style lang="scss" scoped>

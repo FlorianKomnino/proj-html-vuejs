@@ -10,9 +10,7 @@ export default {
 </script>
 
 <template>
-  <div id="projHeaderWrapper">
-    <ProjHeader />
-  </div>
+  <ProjHeader />
 </template>
 
 <style lang="scss">
@@ -20,10 +18,5 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-#projHeaderWrapper {
-  max-width: 100vw !important;
-  overflow-x: hidden;
 }
 </style>
