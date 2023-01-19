@@ -1,17 +1,12 @@
 <script>
-import ProjButton from './ProjButton.vue';
-import ProjCard from './ProjCard.vue';
 
 export default {
-  name: 'MainSecond',
+  name: 'MainVideo',
 
   props: {
-    senseContentText: String,
   },
 
   components: {
-    ProjButton,
-    ProjCard,
   },
 
   data() {
@@ -30,20 +25,22 @@ export default {
 
 <template>
   <section class="senseSection">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-9 m-auto">
+        <div class="col-12 m-auto">
 
-          <h3>
-            who we are
-          </h3>
-          <h1>
-            sense the jazz
-          </h1>
-          <p>
-            {{ senseContentText }}
-          </p>
-          <ProjButton :textOnTheButton="`read more`" class="text-uppercase customButton" />
+
+          <figure>
+            <img :src="getImagePath('../../assets/Video-1024x361.jpg')" class="img-fluid" alt="">
+            <div class="jumboText">
+              <h3>
+                play button
+              </h3>
+              <h1>
+                new music video
+              </h1>
+            </div>
+          </figure>
         </div>
       </div>
     </div>
@@ -51,21 +48,15 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../../styles/partials/variables" as *;
-@use "../../node_modules/bootstrap" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../node_modules/bootstrap" as *;
 
 section.senseSection {
-  background-color: $brandBlack;
-  width: 100vw;
-  padding: 280px 280px 90px 280px;
   text-align: center;
 
   h3 {
     font-size: 0.7rem;
     color: $brandOrange;
-    text-transform: uppercase;
-    transform: scaleX(1.25);
-
   }
 
   h1 {

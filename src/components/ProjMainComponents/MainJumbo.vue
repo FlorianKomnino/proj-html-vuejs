@@ -1,20 +1,14 @@
 <script>
-import { store } from '../store.js';
-import ProjButton from './ProjButton.vue';
-import ProjCard from './ProjCard.vue';
-import FirstSense from './ProjMainComponents/FirstSense.vue';
-import MainJumbo from './ProjMainComponents/MainJumbo.vue';
-import MainVideo from './ProjMainComponents/MainVideo.vue';
+import { store } from '../../store.js';
+import ProjButton from '../ProjButton.vue';
+import ProjCard from '../ProjCard.vue';
 
 export default {
-  name: 'ProjMain',
+  name: 'MainJumbo',
 
   components: {
     ProjButton,
     ProjCard,
-    FirstSense,
-    MainJumbo,
-    MainVideo,
   },
 
   data() {
@@ -39,9 +33,30 @@ export default {
 <template>
 
   <div class="col">
-    <MainJumbo />
-    <FirstSense class="row" :senseContentText="store.senseSectionText" />
-    <MainVideo />
+    <figure>
+      <img :src="getImagePath('../../assets/jumbotronA.png')" class="img-fluid" alt="">
+      <div class="jumboText">
+        <h3>
+          instrumental rock
+        </h3>
+        <h1>
+          music in this video
+        </h1>
+        <ProjButton :textOnTheButton="`read more`" class="text-uppercase customButton" />
+      </div>
+    </figure>
+    <div class="frontViewCards col-9 d-flex">
+      <article>
+        <!-- iconClass set momentarily to different icon because given speaker icon was not found -->
+        <ProjCard :titleText="topCardsProps.titleOriginalIdeas" iconClass="fa-regular fa-lightbulb" />
+      </article>
+      <article>
+        <ProjCard :titleText="topCardsProps.titleMusicStudio" iconClass="fa-solid fa-record-vinyl" />
+      </article>
+      <article>
+        <ProjCard :titleText="topCardsProps.titleAcousticCovers" iconClass="fa-solid fa-headset" />
+      </article>
+    </div>
   </div>
 
 
@@ -49,8 +64,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../../styles/partials/variables" as *;
-@use "../../node_modules/bootstrap" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../node_modules/bootstrap" as *;
 
 figure {
   width: 100vw;
