@@ -40,7 +40,7 @@ export default {
 
   <div class="col">
     <MainJumbo />
-    <FirstSense class="row" :senseContentText="store.senseSectionText" />
+    <FirstSense :senseContentText="store.senseSectionText" />
     <MainVideo />
   </div>
 

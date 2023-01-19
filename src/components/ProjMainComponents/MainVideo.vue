@@ -25,25 +25,17 @@ export default {
 
 <template>
   <section class="senseSection">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 m-auto">
-
-
-          <figure>
-            <img :src="getImagePath('../../assets/Video-1024x361.jpg')" class="img-fluid" alt="">
-            <div class="jumboText">
-              <h3>
-                play button
-              </h3>
-              <h1>
-                new music video
-              </h1>
-            </div>
-          </figure>
-        </div>
+    <figure>
+      <img :src="getImagePath('../../assets/Video-1536x541.jpg')" class="img-fluid" alt="">
+      <div class="MusicVideoTitles">
+        <h3>
+          <i class="fa-regular fa-circle-play"></i>
+        </h3>
+        <h1>
+          new music video
+        </h1>
       </div>
-    </div>
+    </figure>
   </section>
 </template>
 
@@ -54,6 +46,10 @@ export default {
 section.senseSection {
   text-align: center;
 
+  figure {
+    position: relative;
+  }
+
   h3 {
     font-size: 0.7rem;
     color: $brandOrange;
@@ -62,8 +58,8 @@ section.senseSection {
   h1 {
     color: $brandWhite;
     text-transform: uppercase;
-    padding-top: 0.5rem;
-    font-weight: 600;
+    padding-top: 1rem;
+    font-weight: 700;
     transform: scaleY(1.4);
   }
 
@@ -74,6 +70,17 @@ section.senseSection {
     line-height: 1.5rem;
     text-transform: capitalize;
     color: $brandWhite;
+  }
+
+  div.MusicVideoTitles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    i {
+      font-size: 6rem;
+    }
   }
 
   .customButton {
