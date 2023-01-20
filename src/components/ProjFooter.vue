@@ -35,6 +35,7 @@ export default {
 
   <div class="col">
     <FooterBlog />
+    <FooterCarousel />
   </div>
 
 

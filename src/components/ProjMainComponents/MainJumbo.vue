@@ -18,6 +18,10 @@ export default {
         titleOriginalIdeas: 'original ideas',
         titleMusicStudio: 'music studio',
         titleAcousticCovers: 'acoustic covers',
+
+        ideasImgPath: '../../assets/speaker.svg',
+        musicStudioImgPath: '../../assets/disc.svg',
+        acousticCoversImgPath: '../../assets/headphones.svg',
       },
       cardsTextProps: "contrary popular belief, lorem ipsum not simply ipsum random text",
     }
@@ -49,15 +53,15 @@ export default {
     <div class="frontViewCards col-10 d-flex">
       <article>
         <ProjCard :titleText="topCardsProps.titleOriginalIdeas" class="customBgColor"
-          iconClass="fa-regular fa-lightbulb" :textContent="cardsTextProps" />
+          :iconImgUrl="topCardsProps.ideasImgPath" :textContent="cardsTextProps" />
       </article>
       <article>
-        <ProjCard :titleText="topCardsProps.titleMusicStudio" class="customBgColor" iconClass="fa-solid fa-record-vinyl"
-          :textContent="cardsTextProps" />
+        <ProjCard :titleText="topCardsProps.titleMusicStudio" class="customBgColor"
+          :iconImgUrl="topCardsProps.musicStudioImgPath" :textContent="cardsTextProps" />
       </article>
       <article>
-        <ProjCard :titleText="topCardsProps.titleAcousticCovers" class="customBgColor" iconClass="fa-solid fa-headset"
-          :textContent="cardsTextProps" />
+        <ProjCard :titleText="topCardsProps.titleAcousticCovers" class="customBgColor"
+          :iconImgUrl="topCardsProps.acousticCoversImgPath" :textContent="cardsTextProps" />
       </article>
     </div>
   </div>

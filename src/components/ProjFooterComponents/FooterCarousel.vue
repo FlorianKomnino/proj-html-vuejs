@@ -10,18 +10,18 @@ export default {
 
   data() {
     return {
-      statsNumbersProps: {
-        concerts: "163",
-        happyClients: "145",
-        musicAwards: "72",
-        totalSongs: "182",
-      },
-      cardsTextPropsArray: [
-        "concerts",
-        "happy clients",
-        "music awards",
-        "total songs",
-      ],
+      imgPaths: [
+        '../../assets/instagram_img1.jpg',
+        '../../assets/instagram_img2.jpg',
+        '../../assets/instagram_img3.jpg',
+        '../../assets/instagram_img4.jpg',
+        '../../assets/instagram_img5.jpg',
+        '../../assets/instagram_img6.jpg',
+        '../../assets/instagram_img7.jpg',
+        '../../assets/instagram_img8.jpg',
+        '../../assets/instagram_img9.jpg',
+        '../../assets/instagram_img10.jpg',
+      ]
     }
   },
 
@@ -37,27 +37,7 @@ export default {
   <div class="col-12">
 
     <figure>
-      <img :src="getImagePath('../../assets/counter_parallax.jpg')" class="img-fluid"
-        alt="instrument on background image">
-      <div class="statsCards d-flex">
-        <article>
-          <!-- iconClass set momentarily to different icon because given speaker icon was not found -->
-          <StatsCard :titleText="statsNumbersProps.concerts" :textContent="cardsTextPropsArray[0]"
-            iconClass="fa-solid fa-child-reaching" />
-        </article>
-        <article>
-          <StatsCard :titleText="statsNumbersProps.happyClients" :textContent="cardsTextPropsArray[1]"
-            iconClass="fa-solid fa-rocket" />
-        </article>
-        <article>
-          <StatsCard :titleText="statsNumbersProps.musicAwards" :textContent="cardsTextPropsArray[2]"
-            iconClass="fa-solid fa-trophy" />
-        </article>
-        <article>
-          <StatsCard :titleText="statsNumbersProps.totalSongs" :textContent="cardsTextPropsArray[3]"
-            iconClass="fa-solid fa-music" />
-        </article>
-      </div>
+      <img :src="getImagePath(imgPaths[0])" class="img-fluid" alt="instrument on background image">
     </figure>
   </div>
 </template>
@@ -72,6 +52,10 @@ figure {
   position: relative;
   margin: 0;
   overflow: hidden;
+
+  img {
+    height: 100%;
+  }
 
   .statsCards {
     position: absolute;

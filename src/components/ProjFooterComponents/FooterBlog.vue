@@ -87,7 +87,6 @@ section {
     color: $brandOrange;
     text-transform: uppercase;
     transform: scaleX(1.25);
-
   }
 
   h1 {
@@ -107,6 +106,7 @@ section {
     height: 330px;
     width: calc((100% / 3) - 1.5rem);
     margin: 1rem 0 4rem 0;
+    text-align: left;
   }
 }
 </style>

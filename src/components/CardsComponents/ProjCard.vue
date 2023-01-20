@@ -6,7 +6,7 @@ export default {
   props: {
     titleText: String,
     textContent: String,
-    iconClass: String,
+    iconImgUrl: String,
   },
 
   data() {
@@ -25,7 +25,9 @@ export default {
 
 <template>
   <div class="cardWrapper">
-    <i :class="iconClass"></i>
+    <figure>
+      <img :src="getImagePath(iconImgUrl)" alt="theme icon">
+    </figure>
     <h4>
       {{ titleText }}
     </h4>
@@ -43,10 +45,19 @@ export default {
   height: 100%;
   width: 100%;
   padding: 3rem;
+  text-align: center;
 
-  i {
+  figure {
+    width: 90px;
+    height: 90px;
+    filter: invert(100%) sepia(53%) saturate(689%) hue-rotate(240deg) brightness(108%) contrast(106%);
     font-size: 5rem;
     margin-top: 15px;
+    margin: auto;
+
+    img {
+      height: 100%;
+    }
   }
 
   h4 {
