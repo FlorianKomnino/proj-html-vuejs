@@ -35,7 +35,7 @@ export default {
             </h4>
             <input type="text" class="eMailField" placeholder="Email">
             <input type="text" class="messageField" placeholder="Message">
-            <ProjButton :textOnTheButton="`send message`" />
+            <ProjButton :textOnTheButton="`send message`" class="customFormButton" />
         </article>
     </div>
 </template>
@@ -66,5 +66,9 @@ export default {
     input.messageField {
         height: 75px;
     }
+}
+
+.customFormButton {
+    text-transform: uppercase;
 }
 </style>

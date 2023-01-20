@@ -38,5 +38,9 @@ button {
   border: 0.25px solid $brandOrange;
   font-weight: 600;
   transform: scaleY(1.1);
+
+  &:hover {
+    background-color: $brandOrange;
+  }
 }
 </style>
