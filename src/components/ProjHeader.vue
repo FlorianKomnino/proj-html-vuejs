@@ -29,10 +29,11 @@ export default {
     },
 
     dropdownToggler() {
+      let myThis = this;
       if (this.isDropdownMenuvisible) {
-        this.isDropdownMenuvisible = false;
+        myThis.isDropdownMenuvisible = false;
       } else {
-        this.isDropdownMenuvisible = true;
+        myThis.isDropdownMenuvisible = true;
       }
     }
   }
@@ -49,11 +50,11 @@ export default {
 
         <ul class="d-flex">
 
-          <li v-for="menuItem in menuList">
+          <li v-for="menuItem, index in menuList" @click="(menuItem === 'events') ? dropdownToggler() : ''">
             {{ menuItem }}
             <i v-if="menuItem === 'events' || menuItem === 'shop'" class="fa-solid fa-angle-down"></i>
             <div v-if="menuItem === 'events' || menuItem === 'shop'" class="customDropdownMenu"
-              :class="isDropdownMenuvisible === true ? 'customShower' : 'd-none'" @click="dropdownToggler()">
+              :class="isDropdownMenuvisible === true ? 'customShower' : 'd-none'" :key="index">
               <ul>
                 <li>Customizable Content</li>
                 <li>Customizable Content</li>
