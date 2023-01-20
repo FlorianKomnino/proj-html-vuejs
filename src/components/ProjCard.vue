@@ -5,6 +5,7 @@ export default {
 
   props: {
     titleText: String,
+    textContent: String,
     iconClass: String,
   },
 
@@ -29,7 +30,7 @@ export default {
       {{ titleText }}
     </h4>
     <p>
-      contrary popular belief, lorem ipsum not simply ipsum random text
+      {{ textContent }}
     </p>
   </div>
 </template>
@@ -41,7 +42,6 @@ export default {
   color: $brandWhite;
   height: 100%;
   width: 100%;
-  background-color: $alternativeBlack;
   padding: 3rem;
 
   i {

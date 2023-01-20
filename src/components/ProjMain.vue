@@ -7,6 +7,7 @@ import MainJumbo from './ProjMainComponents/MainJumbo.vue';
 import MainVideo from './ProjMainComponents/MainVideo.vue';
 import SecondSense from './ProjMainComponents/SecondSense.vue';
 import AlbumOut from './ProjMainComponents/AlbumOut.vue';
+import MainStats from './ProjMainComponents/MainStats.vue';
 
 export default {
   name: 'ProjMain',
@@ -19,6 +20,7 @@ export default {
     MainVideo,
     SecondSense,
     AlbumOut,
+    MainStats,
   },
 
   data() {
@@ -48,6 +50,7 @@ export default {
     <MainVideo />
     <SecondSense />
     <AlbumOut />
+    <MainStats />
   </div>
 
 

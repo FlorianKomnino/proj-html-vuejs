@@ -51,7 +51,7 @@ export default {
 
 figure {
   width: 100vw;
-  height: 700px;
+  height: 680px;
   position: relative;
   margin: 0;
   overflow: hidden;

@@ -19,6 +19,7 @@ export default {
         titleMusicStudio: 'music studio',
         titleAcousticCovers: 'acoustic covers',
       },
+      cardsTextProps: "contrary popular belief, lorem ipsum not simply ipsum random text",
     }
   },
 
@@ -34,7 +35,7 @@ export default {
 
   <div class="col">
     <figure>
-      <img :src="getImagePath('../../assets/jumbotronA.png')" class="img-fluid" alt="">
+      <img :src="getImagePath('../../assets/jumbotronA.png')" class="img-fluid" alt="jumbo image">
       <div class="jumboText">
         <h3>
           instrumental rock
@@ -47,14 +48,16 @@ export default {
     </figure>
     <div class="frontViewCards col-10 d-flex">
       <article>
-        <!-- iconClass set momentarily to different icon because given speaker icon was not found -->
-        <ProjCard :titleText="topCardsProps.titleOriginalIdeas" iconClass="fa-regular fa-lightbulb" />
+        <ProjCard :titleText="topCardsProps.titleOriginalIdeas" class="customBgColor"
+          iconClass="fa-regular fa-lightbulb" :textContent="cardsTextProps" />
       </article>
       <article>
-        <ProjCard :titleText="topCardsProps.titleMusicStudio" iconClass="fa-solid fa-record-vinyl" />
+        <ProjCard :titleText="topCardsProps.titleMusicStudio" class="customBgColor" iconClass="fa-solid fa-record-vinyl"
+          :textContent="cardsTextProps" />
       </article>
       <article>
-        <ProjCard :titleText="topCardsProps.titleAcousticCovers" iconClass="fa-solid fa-headset" />
+        <ProjCard :titleText="topCardsProps.titleAcousticCovers" class="customBgColor" iconClass="fa-solid fa-headset"
+          :textContent="cardsTextProps" />
       </article>
     </div>
   </div>
@@ -115,6 +118,10 @@ figure {
   article {
     height: 330px;
     padding: 0.75rem;
+
+    .customBgColor {
+      background-color: $alternativeBlack;
+    }
   }
 }
 </style>
