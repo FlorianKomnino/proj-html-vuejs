@@ -1,5 +1,7 @@
 <script>
 import ListCard from '../CardsComponents/ListCard.vue';
+import ProjButton from '../ProjButton.vue';
+import FormCard from '../CardsComponents/FormCard.vue';
 
 export default {
   name: 'FooterBottom',
@@ -9,6 +11,8 @@ export default {
 
   components: {
     ListCard,
+    ProjButton,
+    FormCard,
   },
 
   data() {
@@ -19,12 +23,12 @@ export default {
           listItemsArray: ["502 new design str, melbbourne, san francisco, CA 94110, united states of america australia", "t:1123-456-789", "email:"],
         },
         {
-          listTitle: "music business worldwide",
-          listItemsArray: ["502 new design str, melbbourne, san francisco, CA 94110, united states of america australia"],
+          listTitle: "information",
+          listItemsArray: ["product support", "checkout", "report abuse", "redeem voucher", "order status"],
         },
         {
-          listTitle: "giveaways rock to all",
-          listItemsArray: ["502 new design str, melbbourne, san francisco, CA 94110, united states of america australia"],
+          listTitle: "support",
+          listItemsArray: ["policies & rules", "privacy policy", "license policy", "my account", "locality"],
         },
       ],
     }
@@ -50,7 +54,11 @@ export default {
       <article>
         <ListCard :listTitle="listsProps[2].listTitle" :listItemsArray="listsProps[2].listItemsArray" />
       </article>
+      <article>
+        <FormCard />
+      </article>
     </div>
+
   </section>
 
 
@@ -61,10 +69,11 @@ export default {
 @use "../../../node_modules/bootstrap" as *;
 
 section {
+  text-transform: capitalize;
   background-color: $brandBlack;
   width: 100vw;
   text-align: center;
-  padding: 90px;
+  padding: 40px 40px 20px 40px;
 }
 
 .listsCards {
@@ -74,10 +83,11 @@ section {
 
   article {
     height: 330px;
-    width: calc((100% / 3) - 1.5rem);
-    margin: 1rem 0 4rem 0;
+    width: calc((100% / 4) - 1.5rem);
+    margin: 1rem 0;
     text-align: left;
     color: $brandWhite;
+
   }
 }
 </style>

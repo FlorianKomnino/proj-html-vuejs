@@ -3,6 +3,7 @@ import { store } from '../store.js';
 import FooterBlog from './ProjFooterComponents/FooterBlog.vue';
 import FooterCarousel from './ProjFooterComponents/FooterCarousel.vue';
 import FooterBottom from './ProjFooterComponents/FooterBottom.vue';
+import FooterRights from './ProjFooterComponents/FooterRights.vue';
 
 
 export default {
@@ -12,6 +13,7 @@ export default {
     FooterBlog,
     FooterCarousel,
     FooterBottom,
+    FooterRights,
   },
 
   data() {
@@ -39,6 +41,7 @@ export default {
     <FooterBlog />
     <FooterCarousel />
     <FooterBottom />
+    <FooterRights />
   </div>
 
 

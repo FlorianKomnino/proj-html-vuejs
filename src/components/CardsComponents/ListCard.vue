@@ -51,7 +51,8 @@ export default {
     padding: 3rem;
 
     h4 {
-        margin-top: 35px;
+        margin-top: 20px;
+        padding-bottom: 1rem;
         text-transform: uppercase;
         transform: scaleY(1.25);
     }
@@ -66,7 +67,7 @@ export default {
 
     li {
         list-style-type: none;
-
+        padding: 0.5rem 0;
     }
 }
 </style>
