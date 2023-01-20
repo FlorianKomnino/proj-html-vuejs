@@ -19,7 +19,8 @@ export default {
         "shop",
       ],
 
-      isDropdownMenuvisible: false,
+      isEventsDropdownMenuvisible: false,
+      isShopDropdownMenuvisible: false,
     }
   },
 
@@ -28,12 +29,21 @@ export default {
       return new URL(imgPath, import.meta.url).href;
     },
 
-    dropdownToggler() {
+    dropdownToggler(menuItem) {
       let myThis = this;
-      if (this.isDropdownMenuvisible) {
-        myThis.isDropdownMenuvisible = false;
-      } else {
-        myThis.isDropdownMenuvisible = true;
+      if (menuItem = "events") {
+        if (this.isDropdownMenuvisible) {
+          myThis.isEventsDropdownMenuvisible = false;
+        } else {
+          myThis.isEventsDropdownMenuvisible = true;
+        }
+      }
+      if (menuItem = "shop") {
+        if (this.isDropdownMenuvisible) {
+          myThis.isShopDropdownMenuvisible = false;
+        } else {
+          myThis.isShopDropdownMenuvisible = true;
+        }
       }
     }
   }
@@ -50,11 +60,21 @@ export default {
 
         <ul class="d-flex">
 
-          <li v-for="menuItem, index in menuList" @click="(menuItem === 'events') ? dropdownToggler() : ''">
+          <li v-for="menuItem, index in menuList"
+            @click="(menuItem === 'events' || menuItem === 'shop') ? dropdownToggler(menuItem) : ''">
             {{ menuItem }}
+
             <i v-if="menuItem === 'events' || menuItem === 'shop'" class="fa-solid fa-angle-down"></i>
-            <div v-if="menuItem === 'events' || menuItem === 'shop'" class="customDropdownMenu"
-              :class="isDropdownMenuvisible === true ? 'customShower' : 'd-none'" :key="index">
+
+            <div v-if="menuItem === 'events'" class="customDropdownMenu"
+              :class="isEventsDropdownMenuvisible === true ? 'customShower' : 'd-none'" :key="index">
+              <ul>
+                <li>Customizable Content</li>
+                <li>Customizable Content</li>
+              </ul>
+            </div>
+            <div v-if="menuItem === 'shop'" class="customDropdownMenu"
+              :class="isShopDropdownMenuvisible === true ? 'customShower' : 'd-none'" :key="index">
               <ul>
                 <li>Customizable Content</li>
                 <li>Customizable Content</li>
