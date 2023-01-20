@@ -86,6 +86,10 @@ export default {
       font-size: 0.75rem;
       text-transform: uppercase;
       font-weight: 700;
+
+      &:hover {
+        color: $brandOrange;
+      }
     }
   }
 }
