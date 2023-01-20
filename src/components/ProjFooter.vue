@@ -1,21 +1,21 @@
 <script>
 import { store } from '../store.js';
-import SecondSense from './ProjMainComponents/SecondSense.vue';
-import MainStats from './ProjMainComponents/MainStats.vue';
+import FooterBlog from './ProjFooterComponents/FooterBlog.vue';
+import FooterCarousel from './ProjFooterComponents/FooterCarousel.vue';
 
 
 export default {
-  name: 'ProjMain',
+  name: 'ProjFooter',
 
   components: {
-    SecondSense,
-    MainStats,
+    FooterBlog,
+    FooterCarousel,
   },
 
   data() {
     return {
       store,
-      topCardsProps: {
+      blogCardsProps: {
         titleOriginalIdeas: 'original ideas',
         titleMusicStudio: 'music studio',
         titleAcousticCovers: 'acoustic covers',
@@ -34,8 +34,7 @@ export default {
 <template>
 
   <div class="col">
-    <SecondSense />
-    <MainStats />
+    <FooterBlog />
   </div>
 
 

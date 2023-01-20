@@ -4,8 +4,10 @@ export default {
   name: 'BlogCard',
 
   props: {
-    titleText: String,
     imgPath: String,
+    titleText: String,
+    postDate: String,
+    postTeaser: String,
   },
 
   data() {
@@ -30,17 +32,19 @@ export default {
     <h4>
       {{ titleText }}
     </h4>
+    <time>
+      <i class="fa-solid fa-calendar-days"></i>
+      {{ postDate }}
+    </time>
     <p>
-      stream on : <i class="fa-brands fa-spotify"></i> <i class="fa-brands fa-youtube"></i> <i
-        class="fa-brands fa-itunes-note"></i> <i class="fa-brands fa-soundcloud"></i> <i
-        class="fa-brands fa-safari"></i>
+      {{ postTeaser }}
     </p>
   </div>
 </template>
 
 <style lang="scss" scoped>
-@use "../../styles/partials/variables" as *;
-@use "../../node_modules/bootstrap" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../node_modules/bootstrap" as *;
 
 .cardWrapper {
   color: $brandWhite;

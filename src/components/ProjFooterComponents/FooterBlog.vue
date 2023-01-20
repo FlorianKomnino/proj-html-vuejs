@@ -1,5 +1,5 @@
 <script>
-import StreamCard from '../CardsComponents/StreamCard.vue';
+import BlogCard from '../CardsComponents/BlogCard.vue';
 
 export default {
   name: 'FooterBlog',
@@ -8,27 +8,31 @@ export default {
   },
 
   components: {
-    StreamCard,
+    BlogCard,
   },
 
   data() {
     return {
-      cardsTitles: [
-        "a roll and bang the floor",
-        "your melody to our music",
-        "touching heaven on frequency",
-        "misic makes stronge beats",
-        "sound is the spark of time",
-        "make your night groovy",
+      postsProps: [
+        {
+          postImgPath: "../../assets/hip_hop_wired_to_dance_make.jpg",
+          postTitle: "hip hop wired to dance make",
+          postDate: "06 november 2021",
+          postTeaserContent: "Driving short distances music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former"
+        },
+        {
+          postImgPath: "../../assets/music_business-worldwide.jpg",
+          postTitle: "music business worldwide",
+          postDate: "27 may 2022",
+          postTeaserContent: "accelerate work and drive productivity the beatles' experimentation and creative freedom led other bands to experiment in various ways as well."
+        },
+        {
+          postImgPath: "../../assets/giveaways_rock.jpg",
+          postTitle: "giveaways rock to all",
+          postDate: "07 may 2022",
+          postTeaserContent: "signs your car battery has to be replaced when the dashboard lights start flashing, this is a sign the battery is dying. several issues arise and"
+        },
       ],
-      cardsImgsList: [
-        "../assets/gallery1.jpg",
-        "../assets/gallery2.jpg",
-        "../assets/gallery3.jpg",
-        "../assets/gallery4.jpg",
-        "../assets/gallery5.jpg",
-        "../assets/gallery6.jpg",
-      ]
     }
   },
 
@@ -43,30 +47,24 @@ export default {
 <template>
   <section>
     <h3>
-      who we are
+      music blog
     </h3>
     <h1>
-      sense the jazz
+      best music blog
     </h1>
 
     <div class="streamsCards col-10 d-flex flex-wrap">
       <article>
-        <StreamCard :titleText="cardsTitles[0]" :imgPath="cardsImgsList[0]" />
+        <BlogCard :titleText="postsProps[0].postTitle" :imgPath="postsProps[0].postImgPath"
+          :postDate="postsProps[0].postDate" :postTeaser="postsProps[0].postTeaserContent" />
       </article>
       <article>
-        <StreamCard :titleText="cardsTitles[1]" :imgPath="cardsImgsList[1]" />
+        <BlogCard :titleText="postsProps[1].postTitle" :imgPath="postsProps[1].postImgPath"
+          :postDate="postsProps[1].postDate" :postTeaser="postsProps[1].postTeaserContent" />
       </article>
       <article>
-        <StreamCard :titleText="cardsTitles[2]" :imgPath="cardsImgsList[2]" />
-      </article>
-      <article>
-        <StreamCard :titleText="cardsTitles[3]" :imgPath="cardsImgsList[3]" />
-      </article>
-      <article>
-        <StreamCard :titleText="cardsTitles[4]" :imgPath="cardsImgsList[4]" />
-      </article>
-      <article>
-        <StreamCard :titleText="cardsTitles[5]" :imgPath="cardsImgsList[5]" />
+        <BlogCard :titleText="postsProps[2].postTitle" :imgPath="postsProps[2].postImgPath"
+          :postDate="postsProps[2].postDate" :postTeaser="postsProps[2].postTeaserContent" />
       </article>
     </div>
   </section>

@@ -6,6 +6,7 @@ import MainVideo from './ProjMainComponents/MainVideo.vue';
 import SecondSense from './ProjMainComponents/SecondSense.vue';
 import AlbumOut from './ProjMainComponents/AlbumOut.vue';
 import MainStats from './ProjMainComponents/MainStats.vue';
+import ProjFooter from './ProjFooter.vue';
 
 export default {
   name: 'ProjMain',
@@ -17,6 +18,7 @@ export default {
     SecondSense,
     AlbumOut,
     MainStats,
+    ProjFooter,
   },
 
   data() {
@@ -42,6 +44,7 @@ export default {
     <SecondSense />
     <AlbumOut />
     <MainStats />
+    <ProjFooter />
   </div>
 
 
