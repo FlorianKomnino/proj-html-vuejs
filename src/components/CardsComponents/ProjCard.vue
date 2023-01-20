@@ -47,6 +47,12 @@ export default {
   padding: 3rem;
   text-align: center;
 
+  &:hover figure {
+    filter: invert(11%) sepia(80%) saturate(6753%) hue-rotate(348deg) brightness(82%) contrast(84%);
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+
   figure {
     width: 90px;
     height: 90px;
