@@ -1,11 +1,11 @@
 <script>
-import ProjCard from '../ProjCard.vue';
+import StatsCard from '../StatsCard.vue';
 
 export default {
   name: 'MainStats',
 
   components: {
-    ProjCard,
+    StatsCard,
   },
 
   data() {
@@ -42,20 +42,20 @@ export default {
       <div class="statsCards d-flex">
         <article>
           <!-- iconClass set momentarily to different icon because given speaker icon was not found -->
-          <ProjCard :titleText="statsNumbersProps.concerts" class="cardCustomization"
-            :textContent="cardsTextPropsArray[0]" iconClass="fa-solid fa-child-reaching" />
+          <StatsCard :titleText="statsNumbersProps.concerts" :textContent="cardsTextPropsArray[0]"
+            iconClass="fa-solid fa-child-reaching" />
         </article>
         <article>
-          <ProjCard :titleText="statsNumbersProps.happyClients" class="cardCustomization"
-            :textContent="cardsTextPropsArray[1]" iconClass="fa-solid fa-rocket" />
+          <StatsCard :titleText="statsNumbersProps.happyClients" :textContent="cardsTextPropsArray[1]"
+            iconClass="fa-solid fa-rocket" />
         </article>
         <article>
-          <ProjCard :titleText="statsNumbersProps.musicAwards" class="cardCustomization"
-            :textContent="cardsTextPropsArray[2]" iconClass="fa-solid fa-trophy" />
+          <StatsCard :titleText="statsNumbersProps.musicAwards" :textContent="cardsTextPropsArray[2]"
+            iconClass="fa-solid fa-trophy" />
         </article>
         <article>
-          <ProjCard :titleText="statsNumbersProps.totalSongs" class="cardCustomization"
-            :textContent="cardsTextPropsArray[3]" iconClass="fa-solid fa-music" />
+          <StatsCard :titleText="statsNumbersProps.totalSongs" :textContent="cardsTextPropsArray[3]"
+            iconClass="fa-solid fa-music" />
         </article>
       </div>
     </figure>
@@ -75,20 +75,19 @@ figure {
 
   .statsCards {
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    justify-content: center;
 
     article {
       height: 300px;
-      padding: 0.75rem;
+      width: 250px;
       color: $brandWhite;
+      margin: 0 20px;
 
-      .cardCustomization {
-        margin: 0 2rem;
-        font-size: 2.5rem;
-      }
     }
   }
 }
