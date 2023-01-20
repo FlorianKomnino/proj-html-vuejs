@@ -1,27 +1,25 @@
 <script>
 import { store } from '../store.js';
-import FirstSense from './ProjMainComponents/FirstSense.vue';
-import MainJumbo from './ProjMainComponents/MainJumbo.vue';
-import MainVideo from './ProjMainComponents/MainVideo.vue';
 import SecondSense from './ProjMainComponents/SecondSense.vue';
-import AlbumOut from './ProjMainComponents/AlbumOut.vue';
 import MainStats from './ProjMainComponents/MainStats.vue';
+
 
 export default {
   name: 'ProjMain',
 
   components: {
-    FirstSense,
-    MainJumbo,
-    MainVideo,
     SecondSense,
-    AlbumOut,
     MainStats,
   },
 
   data() {
     return {
       store,
+      topCardsProps: {
+        titleOriginalIdeas: 'original ideas',
+        titleMusicStudio: 'music studio',
+        titleAcousticCovers: 'acoustic covers',
+      },
     }
   },
 
@@ -36,11 +34,7 @@ export default {
 <template>
 
   <div class="col">
-    <MainJumbo />
-    <FirstSense :senseContentText="store.senseSectionText" />
-    <MainVideo />
     <SecondSense />
-    <AlbumOut />
     <MainStats />
   </div>
 

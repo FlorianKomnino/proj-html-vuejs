@@ -1,13 +1,11 @@
 <script>
 import ProjButton from '../ProjButton.vue';
-import ProjCard from '../ProjCard.vue';
 
 export default {
   name: 'AlbumOut',
 
   components: {
     ProjButton,
-    ProjCard,
   },
 
   data() {

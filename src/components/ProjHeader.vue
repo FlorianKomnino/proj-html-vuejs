@@ -50,6 +50,7 @@ export default {
 
     </div>
   </div>
+
   <ProjMain />
 
 </template>

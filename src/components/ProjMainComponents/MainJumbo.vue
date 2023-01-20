@@ -1,7 +1,7 @@
 <script>
 import { store } from '../../store.js';
 import ProjButton from '../ProjButton.vue';
-import ProjCard from '../ProjCard.vue';
+import ProjCard from '../CardsComponents/ProjCard.vue';
 
 export default {
   name: 'MainJumbo',

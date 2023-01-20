@@ -1,7 +1,7 @@
 <script>
 
 export default {
-  name: 'StreamCard',
+  name: 'BlogCard',
 
   props: {
     titleText: String,

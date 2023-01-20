@@ -2,7 +2,7 @@
 import StatsCard from '../CardsComponents/StatsCard.vue';
 
 export default {
-  name: 'MainStats',
+  name: 'FooterCarousel',
 
   components: {
     StatsCard,

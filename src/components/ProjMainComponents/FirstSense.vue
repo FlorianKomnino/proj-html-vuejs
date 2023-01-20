@@ -1,6 +1,5 @@
 <script>
 import ProjButton from '../ProjButton.vue';
-import ProjCard from '../ProjCard.vue';
 
 export default {
   name: 'FirstSense',
@@ -11,7 +10,6 @@ export default {
 
   components: {
     ProjButton,
-    ProjCard,
   },
 
   data() {
