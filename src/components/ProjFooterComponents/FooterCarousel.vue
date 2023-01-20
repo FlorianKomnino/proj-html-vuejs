@@ -37,7 +37,8 @@ export default {
   <div class="col-12">
 
     <figure>
-      <img :src="getImagePath(imgPaths[0])" class="img-fluid" alt="instrument on background image">
+      <img v-for="imagePath, index in imgPaths" :src="getImagePath(imgPaths[index])" class="img-fluid"
+        alt="instrument on background image">
     </figure>
   </div>
 </template>
@@ -48,8 +49,8 @@ export default {
 
 figure {
   width: 100vw;
-  height: 350px;
-  position: relative;
+  height: 250px;
+  display: flex;
   margin: 0;
   overflow: hidden;
 
@@ -57,22 +58,5 @@ figure {
     height: 100%;
   }
 
-  .statsCards {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    justify-content: center;
-
-    article {
-      height: 300px;
-      width: 250px;
-      color: $brandWhite;
-      margin: 0 20px;
-
-    }
-  }
 }
 </style>
