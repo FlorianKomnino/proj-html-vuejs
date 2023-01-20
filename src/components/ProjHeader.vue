@@ -18,6 +18,8 @@ export default {
         "about us",
         "shop",
       ],
+
+      isDropdownMenuvisible: false,
     }
   },
 
@@ -25,6 +27,14 @@ export default {
     getImagePath: function (imgPath) {
       return new URL(imgPath, import.meta.url).href;
     },
+
+    dropdownToggler() {
+      if (this.isDropdownMenuvisible) {
+        this.isDropdownMenuvisible = false;
+      } else {
+        this.isDropdownMenuvisible = true;
+      }
+    }
   }
 }
 </script>
@@ -38,10 +48,19 @@ export default {
         </figure>
 
         <ul class="d-flex">
+
           <li v-for="menuItem in menuList">
             {{ menuItem }}
             <i v-if="menuItem === 'events' || menuItem === 'shop'" class="fa-solid fa-angle-down"></i>
+            <div v-if="menuItem === 'events' || menuItem === 'shop'" class="customDropdownMenu"
+              :class="isDropdownMenuvisible === true ? 'customShower' : 'd-none'" @click="dropdownToggler()">
+              <ul>
+                <li>Customizable Content</li>
+                <li>Customizable Content</li>
+              </ul>
+            </div>
           </li>
+
           <li>
             <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
           </li>
@@ -86,10 +105,29 @@ export default {
       font-size: 0.75rem;
       text-transform: uppercase;
       font-weight: 700;
+      position: relative;
 
       &:hover {
         color: $brandOrange;
       }
+    }
+  }
+
+  div.customDropdownMenu {
+    position: absolute;
+    border-radius: 1rem;
+    top: 45px;
+    right: 0;
+    z-index: 3;
+    background-color: $brandBlack;
+    color: $brandWhite;
+
+    li {
+      margin: 0.5rem 0;
+    }
+
+    .customShower {
+      display: block !important;
     }
   }
 }
