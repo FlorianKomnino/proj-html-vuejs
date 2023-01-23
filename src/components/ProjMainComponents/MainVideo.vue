@@ -49,6 +49,10 @@ section.senseSection {
   figure {
     position: relative;
     margin-bottom: 0;
+
+    img {
+      width: 100%;
+    }
   }
 
   h3 {

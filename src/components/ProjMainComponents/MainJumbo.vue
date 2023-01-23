@@ -81,6 +81,10 @@ figure {
   margin: 0;
   overflow: hidden;
 
+  img {
+    width: 100%;
+  }
+
   div.jumboText {
     position: absolute;
     top: 50%;

@@ -31,15 +31,14 @@ export default {
 
     dropdownToggler(menuItem) {
       let myThis = this;
-      if (menuItem = "events") {
-        if (this.isDropdownMenuvisible) {
+      if (menuItem === "events") {
+        if (this.isEventsDropdownMenuvisible) {
           myThis.isEventsDropdownMenuvisible = false;
         } else {
           myThis.isEventsDropdownMenuvisible = true;
         }
-      }
-      if (menuItem = "shop") {
-        if (this.isDropdownMenuvisible) {
+      } else if (menuItem === "shop") {
+        if (this.isShopDropdownMenuvisible) {
           myThis.isShopDropdownMenuvisible = false;
         } else {
           myThis.isShopDropdownMenuvisible = true;
